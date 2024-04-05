@@ -57,6 +57,7 @@ export default function AddTransaction() {
                         type="text"
                         name="description"
                         id="description"
+                        required
                         ref={desc}
                         value={transaction.description}
                         onChange={handleChange}
@@ -69,6 +70,7 @@ export default function AddTransaction() {
                         step={0.01}
                         name="value"
                         id="value"
+                        required
                         value={transaction.value}
                         onChange={handleChange}
                     />
