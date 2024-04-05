@@ -1,3 +1,9 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .addTransactionAria {
     padding: 15px 40px;
     display: flex;
@@ -5,6 +11,7 @@
     align-items: center;
     background-color: white;
     height: auto;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px black;
 
@@ -51,4 +58,25 @@
 
 .addButton:hover {
     background-color: #06aea8;
+}
+
+@media (max-width: 1000px) {
+    .addTransactionAria {
+        width: 70%;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .inputContent {
+        width: 100%;
+        input {
+            height: 40px;
+        }
+    }
+    
+    .inputRadioContent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }  
 }

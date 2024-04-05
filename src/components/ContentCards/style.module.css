@@ -1,12 +1,19 @@
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    column-gap: 15px;
-    
+    row-gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .icon {
     color: black;
     font-size: 1.3rem;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        justify-content: center;
+    }
 }

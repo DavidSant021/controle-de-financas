@@ -49,52 +49,54 @@ export default function AddTransaction() {
     }
 
     return (
-        <form ref={formRef} onSubmit={handleSubmit} className={styles.addTransactionAria}>
-            <div className={styles.inputContent}>
-                <label htmlFor="description">Descrição</label>
-                <input
-                    type="text"
-                    name="description"
-                    id="description"
-                    ref={desc}
-                    value={transaction.description}
-                    onChange={handleChange}
-                />
-            </div>
-            <div className={styles.inputContent}>
-                <label htmlFor="value">Valor</label>
-                <input
-                    type="number"
-                    step={0.01}
-                    name="value"
-                    id="value"
-                    value={transaction.value}
-                    onChange={handleChange}
-                />
-            </div>
-            <div className={styles.inputRadioContent}>
-                <div>
+        <div className={styles.container}>
+            <form ref={formRef} onSubmit={handleSubmit} className={styles.addTransactionAria}>
+                <div className={styles.inputContent}>
+                    <label htmlFor="description">Descrição</label>
                     <input
-                        type="radio"
-                        name="type"
-                        id="input"
-                        value='entrada'
-                        onChange={handleRadioChange}
+                        type="text"
+                        name="description"
+                        id="description"
+                        ref={desc}
+                        value={transaction.description}
+                        onChange={handleChange}
                     />
-                    <label htmlFor="input">Entrada</label>
                 </div>
-                <div>
+                <div className={styles.inputContent}>
+                    <label htmlFor="value">Valor</label>
                     <input
-                        type="radio"
-                        name="type"
-                        id="output"
-                        value='saida'
-                        onChange={handleRadioChange}
+                        type="number"
+                        step={0.01}
+                        name="value"
+                        id="value"
+                        value={transaction.value}
+                        onChange={handleChange}
                     />
-                    <label htmlFor="output">Saída</label>
                 </div>
-            </div>
-            <button className={styles.addButton}>Adicionar</button>
-        </form>
+                <div className={styles.inputRadioContent}>
+                    <div>
+                        <input
+                            type="radio"
+                            name="type"
+                            id="input"
+                            value='entrada'
+                            onChange={handleRadioChange}
+                        />
+                        <label htmlFor="input">Entrada</label>
+                    </div>
+                    <div>
+                        <input
+                            type="radio"
+                            name="type"
+                            id="output"
+                            value='saida'
+                            onChange={handleRadioChange}
+                        />
+                        <label htmlFor="output">Saída</label>
+                    </div>
+                </div>
+                <button className={styles.addButton}>Adicionar</button>
+            </form>
+        </div>
     )
 }

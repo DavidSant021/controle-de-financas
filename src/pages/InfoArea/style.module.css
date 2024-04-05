@@ -1,8 +1,18 @@
+.container {
+    width: 100%;
+}
+
+.containerTable {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .table {
     width: 100%;
     background-color: white;
-    border-radius: 10px;
     border-collapse: collapse;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px black;
 }
 
@@ -17,15 +27,17 @@
     text-align: left;
 }
 
+.tdTrash {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .trash {
-    position: relative;
-    left: 50px;
     cursor: pointer;
 }
 
 .viewButton {
-    position: relative;
-    left: 100px;
     text-decoration: none;
     color: white;
     background-color: teal;
@@ -43,4 +55,32 @@
 
 .arrowDonw {
     color: red;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .containerTable {
+        width: 70%;
+        overflow: auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    .tdTrash {
+        column-gap: 30px;
+    }
+
+    .td, .th {
+        padding: 20px 10px 20px 40px;
+    }
+}
+
+@media (max-width: 590px) {
+    .containerTable {
+        width: 100%;
+    }
 }

@@ -9,6 +9,14 @@ body {
     background-color: lightgray;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
@@ -25,9 +33,17 @@ body {
 }
 
 .main {
-    max-width: 900px;
-    margin: -45px auto;
+    width: 1000px;
+    margin-top: -45px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 15px;
 }
+
+@media (max-width: 1000px) {
+    .main {
+        width: 100vw;
+    }
+}
+

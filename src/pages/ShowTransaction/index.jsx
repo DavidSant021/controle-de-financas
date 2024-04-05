@@ -18,26 +18,28 @@ export default function ShowTransaction() {
 
     return (
         <div key={transaction.id} className={styles.container}>
-            <table className={styles.transactionTable}>
-                <tbody>
-                    <tr>
-                        <th className={styles.th}>Nome</th>
-                        <th className={styles.th}>Valor</th>
-                        <th className={styles.th}>Tipo</th>
-                        <th className={styles.th}>Data</th>
-                    </tr>
-                    <tr>
-                        <td className={styles.td}>{transaction.description}</td>
-                        <td className={styles.td}>{formattedValue}</td>
-                        <td className={styles.td}>
-                            {
-                                transaction.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDown} />
-                            }
-                        </td>
-                        <td className={styles.td}>{formattedDate}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className={styles.containerTable}>
+                <table className={styles.transactionTable}>
+                    <tbody>
+                        <tr>
+                            <th className={styles.th}>Nome</th>
+                            <th className={styles.th}>Valor</th>
+                            <th className={styles.th}>Tipo</th>
+                            <th className={styles.th}>Data</th>
+                        </tr>
+                        <tr>
+                            <td className={styles.td}>{transaction.description}</td>
+                            <td className={styles.td}>{formattedValue}</td>
+                            <td className={styles.td}>
+                                {
+                                    transaction.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDown} />
+                                }
+                            </td>
+                            <td className={styles.td}>{formattedDate}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <Link to='/' className={styles.returnButton} >Voltar</Link>
         </div>
     )

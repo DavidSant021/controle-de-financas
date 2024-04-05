@@ -1,5 +1,5 @@
 .infoContent {
-    width: 310px;
+    width: 32.2%;
     height: 110px;
     background-color: white;
     display: flex;
@@ -25,4 +25,10 @@
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .infoContent {
+        width: 70%;
+    }
 }
