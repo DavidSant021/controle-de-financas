@@ -1,0 +1,54 @@
+.addTransactionAria {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+
+    label {
+        font-weight: 400;
+    }
+}
+
+.inputContent {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    row-gap: 5px;
+
+    input {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 3px;
+        outline: none;
+        text-indent: 10px;
+        font-weight: 500;
+    }
+}
+
+.inputRadioContent {
+    display: flex;
+    column-gap: 20px;
+
+    input {
+        margin-right: 5px;
+    }
+}
+
+.addButton {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.addButton:hover {
+    background-color: #06aea8;
+}

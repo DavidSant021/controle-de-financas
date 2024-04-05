@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.transactionTable {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px black;
+}
+
+.th {
+    border-bottom: 1px solid black;
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.td {
+    padding: 15px 40px;
+    text-align: left;
+}
+
+.arrowUp {
+    color: green;
+}
+
+.arrowDown {
+    color: red;
+}
+
+.returnButton {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.returnButton:hover {
+    background-color: #06aea8;
+}

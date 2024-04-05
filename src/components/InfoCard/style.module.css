@@ -1,0 +1,28 @@
+.infoContent {
+    width: 310px;
+    height: 110px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.categoryContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    p {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+}
+
+.valueContent {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}

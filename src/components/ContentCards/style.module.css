@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    column-gap: 15px;
+    
+}
+
+.icon {
+    color: black;
+    font-size: 1.3rem;
+}

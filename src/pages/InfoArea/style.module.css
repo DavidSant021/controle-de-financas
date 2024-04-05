@@ -1,0 +1,46 @@
+.table {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px black;
+}
+
+.th {
+    border-bottom: 1px solid black;
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.td {
+    padding: 15px 40px;
+    text-align: left;
+}
+
+.trash {
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+.viewButton {
+    position: relative;
+    left: 100px;
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+
+.viewButton:hover {
+    background-color: #06aea8;
+}
+
+.arrowUp {
+    color: green;
+}
+
+.arrowDonw {
+    color: red;
+}
