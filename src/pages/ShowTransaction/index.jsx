@@ -19,7 +19,7 @@ export default function ShowTransaction() {
     return (
         <div key={transaction.id} className={styles.container}>
             <div className={styles.containerTable}>
-                <table className={styles.transactionTable}>
+                <table className={styles.table}>
                     <tbody>
                         <tr>
                             <th className={styles.th}>Nome</th>
