@@ -31,7 +31,6 @@ export default function AddTransaction() {
             console.log(error)
         } finally {
             setTransaction(defaultTransaction)
-            alert('Transação salva com sucesso!')
             formRef.current.reset()
             desc.current.focus()
         }
