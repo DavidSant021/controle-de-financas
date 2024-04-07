@@ -1,9 +1,10 @@
 import { useContext } from "react"
 import ButtonDelete from "../../components/ButtonDelete"
 import { ValueContext } from "../../context/ValueContext"
-import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown} from 'react-icons/fa'
+import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown } from 'react-icons/fa'
 import styles from './style.module.css'
 import { Link } from "react-router-dom"
+import Table from 'react-bootstrap/Table';
 
 export default function InfoArea() {
 
@@ -14,15 +15,17 @@ export default function InfoArea() {
     }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.containerTable}>
-                <table className={styles.table}>
-                    <tbody>
+        <>
+            <div className="container-fluid">
+                <Table responsive className={styles.transactionTable}>
+                    <thead>
                         <tr>
                             <th className={styles.th} >Descrição</th>
                             <th className={styles.th} >Valor</th>
                             <th className={styles.th} >Tipo</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         {transactions.map(t => (
                             <tr key={t.id}>
                                 <td className={styles.td} >{t.description}</td>
@@ -41,8 +44,8 @@ export default function InfoArea() {
                             </tr>
                         ))}
                     </tbody>
-                </table>
+                </Table>
             </div>
-        </div>
+        </>
     )
 }

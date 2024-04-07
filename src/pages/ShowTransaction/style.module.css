@@ -1,36 +1,9 @@
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 15px;
-}
-
-.containerTable {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-}
-
 .transactionTable {
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    border-collapse: collapse;
+    margin: 0 !important;
 }
 
-.th {
-    border-bottom: 1px solid black;
-    padding: 20px 40px;
-    text-align: left;
-}
-
-.td {
-    padding: 15px 40px;
-    text-align: left;
+.th, .td {
+    padding: 20px 40px !important;
 }
 
 .arrowUp {
@@ -42,30 +15,18 @@
 }
 
 .returnButton {
+    position: relative;
+    bottom: 90px;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
     background-color: teal;
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 15px 30px;
     cursor: pointer;
     transition: .5s;
 }
 
 .returnButton:hover {
     background-color: #06aea8;
-}
-
-@media (max-width: 1000px) {
-    .containerTable {
-        width: 70%;
-        overflow: auto;
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px black;
-    }
-
-    .transactionTable {
-        width: 100%;
-        font-size: .8rem;
-    }
 }

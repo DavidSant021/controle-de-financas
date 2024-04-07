@@ -1,9 +1,10 @@
 import { useContext } from "react"
 import { Link, useParams } from "react-router-dom"
 import { ValueContext } from "../../context/ValueContext"
-import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown} from 'react-icons/fa'
+import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { format } from "date-fns"
 import styles from './style.module.css'
+import Table from 'react-bootstrap/Table';
 
 export default function ShowTransaction() {
     const { id } = useParams()
@@ -17,16 +18,18 @@ export default function ShowTransaction() {
     const formattedValue = Number(transaction.value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     return (
-        <div key={transaction.id} className={styles.container}>
-            <div className={styles.containerTable}>
-                <table className={styles.transactionTable}>
-                    <tbody>
+        <>
+            <div className="container-fluid">
+                <Table responsive className={styles.transactionTable}>
+                    <thead>
                         <tr>
-                            <th className={styles.th}>Nome</th>
+                            <th className={styles.th}>Descrição</th>
                             <th className={styles.th}>Valor</th>
                             <th className={styles.th}>Tipo</th>
                             <th className={styles.th}>Data</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td className={styles.td}>{transaction.description}</td>
                             <td className={styles.td}>{formattedValue}</td>
@@ -35,12 +38,12 @@ export default function ShowTransaction() {
                                     transaction.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDown} />
                                 }
                             </td>
-                            <td className={styles.td}>{formattedDate}</td>
+                            <td  className={styles.td}>{formattedDate}</td>
                         </tr>
                     </tbody>
-                </table>
+                </Table>
             </div>
             <Link to='/' className={styles.returnButton} >Voltar</Link>
-        </div>
+        </>
     )
 }

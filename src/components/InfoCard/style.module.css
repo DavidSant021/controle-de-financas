@@ -1,10 +1,10 @@
 .infoContent {
     width: 32.2%;
-    height: 110px;
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 20px 40px;
+    padding: 10px 40px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px black;
 }
@@ -13,7 +13,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
 
     p {
         font-weight: 500;

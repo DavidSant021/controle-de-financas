@@ -48,7 +48,7 @@ export default function AddTransaction() {
     }
 
     return (
-        <div className={styles.container}>
+        <>
             <form ref={formRef} onSubmit={handleSubmit} className={styles.addTransactionAria}>
                 <div className={styles.inputContent}>
                     <label htmlFor="description">Descrição</label>
@@ -98,6 +98,6 @@ export default function AddTransaction() {
                 </div>
                 <button className={styles.addButton}>Adicionar</button>
             </form>
-        </div>
+        </>
     )
 }

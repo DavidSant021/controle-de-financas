@@ -41,9 +41,23 @@ body {
     row-gap: 15px;
 }
 
+.container-fluid {
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+.table-responsive {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
 @media (max-width: 1000px) {
     .main {
         width: 100vw;
+    }
+
+    .container-fluid {
+        width: 70%;
     }
 }
 
