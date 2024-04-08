@@ -1,34 +1,41 @@
 .addTransactionAria {
-    padding: 15px 40px;
+    padding: 25px 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     column-gap: 40px;
     background-color: white;
     height: auto;
     width: 100%;
     border-radius: 10px;
     box-shadow: 2px 2px 5px black;
-
-    label {
-        font-weight: bold;
-    }
 }
 
-.inputContent {
+.inputsContent {
+    width: 45%;
     display: flex;
     flex-direction: column;
-    text-align: left;
-    row-gap: 5px;
+    row-gap: 20px;
+}
 
-    input {
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: 3px;
-        outline: none;
-        text-indent: 10px;
-        font-weight: 500;
-    }
+.input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    height: 38px;
+    outline: none;
+    text-indent: 10px;
+    font-weight: 500;
+}
+
+.inputData {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 100%;
+    padding: 3px;
+    height: 38px;
+    outline: none;
 }
 
 .select {
@@ -57,10 +64,7 @@
         row-gap: 20px;
     }
 
-    .inputContent {
+    .inputsContent {
         width: 100%;
-        input {
-            height: 40px;
-        }
     }
 }

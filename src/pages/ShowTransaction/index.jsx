@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { Link, useParams } from "react-router-dom"
 import { ValueContext } from "../../context/ValueContext"
 import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown } from 'react-icons/fa'
-import { format } from "date-fns"
+import { format, addDays } from "date-fns"
 import styles from './style.module.css'
 import Table from 'react-bootstrap/Table';
 
@@ -12,8 +12,8 @@ export default function ShowTransaction() {
 
     const transaction = transactions.find(t => t.id === +id)
 
-    // Formatando a data usando date-fns
-    const formattedDate = format(new Date(transaction.createdAt), 'dd/MM/yyyy HH:mm:ss');
+    const nextDayDate = addDays(new Date(transaction.createdAt), 1);
+    const formattedNextDayDate = format(nextDayDate, 'dd/MM/yyyy');
 
     const formattedValue = Number(transaction.value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
@@ -38,7 +38,7 @@ export default function ShowTransaction() {
                                     transaction.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDown} />
                                 }
                             </td>
-                            <td  className={styles.td}>{formattedDate}</td>
+                            <td  className={styles.td}>{formattedNextDayDate}</td>
                         </tr>
                     </tbody>
                 </Table>

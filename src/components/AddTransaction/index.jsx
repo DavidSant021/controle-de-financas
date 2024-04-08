@@ -9,7 +9,8 @@ export default function AddTransaction() {
     const defaultTransaction = {
         description: '',
         value: "",
-        type: null
+        type: null,
+        createdAt: ''
     }
 
     const [transaction, setTransaction] = useState(defaultTransaction)
@@ -17,7 +18,6 @@ export default function AddTransaction() {
     const [open, setOpen] = useState(false)
     const [modalType, setModalType] = useState(false)
 
-    const desc = useRef(null)
     const formRef = useRef(null);
 
     const { addTransaction } = useContext(ValueContext)
@@ -42,7 +42,6 @@ export default function AddTransaction() {
         } finally {
             setTransaction(defaultTransaction)
             formRef.current.reset()
-            desc.current.focus()
             setSelectedType(null)
         }
 
@@ -66,45 +65,56 @@ export default function AddTransaction() {
                 onSubmit={handleSubmit}
                 className={styles.addTransactionAria}
             >
-                <div className={styles.inputContent}>
-                    <label htmlFor="description">Descrição</label>
+                <div className={styles.inputsContent}>
                     <input
                         type="text"
+                        className={styles.input}
                         name="description"
                         id="description"
+                        placeholder="Descrição"
                         required
-                        ref={desc}
                         value={transaction.description}
                         onChange={handleChange}
                     />
-                </div>
-                <div className={styles.inputContent}>
-                    <label htmlFor="value">Valor</label>
+
                     <input
                         type="number"
                         step={0.01}
+                        className={styles.input}
                         name="value"
                         id="value"
+                        placeholder="Valor"
                         required
                         value={transaction.value}
                         onChange={handleChange}
                     />
                 </div>
-                <Form.Select
-                    className={styles.select}
-                    aria-label="Default select example"
-                    onChange={handleSelectChange}
-                >
-                    <option>
-                        Tipo de Transação
-                    </option>
-                    <option value="entrada">
-                        Entrada
-                    </option>
-                    <option value="saida">
-                        Saída
-                    </option>
-                </Form.Select>
+                <div className={styles.inputsContent}>
+                    <Form.Select
+                        className={styles.select}
+                        aria-label="Default select example"
+                        onChange={handleSelectChange}
+                    >
+                        <option>
+                            Tipo de Transação
+                        </option>
+                        <option value="entrada">
+                            Entrada
+                        </option>
+                        <option value="saida">
+                            Saída
+                        </option>
+                    </Form.Select>
+                    <input
+                        className={styles.inputData}
+                        type="date"
+                        name="createdAt"
+                        id="created"
+                        required
+                        value={transaction.createdAt}
+                        onChange={handleChange}
+                    />
+                </div>
                 <button className={styles.addButton}>Adicionar</button>
             </form>
             <Modal
