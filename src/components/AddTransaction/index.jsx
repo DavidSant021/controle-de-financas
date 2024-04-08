@@ -2,23 +2,25 @@ import { useContext, useRef, useState } from "react"
 import Transaction from "../../entities/Transaction"
 import { ValueContext } from "../../context/ValueContext"
 import styles from './style.module.css'
+import Form from 'react-bootstrap/Form';
 
 export default function AddTransaction() {
     const defaultTransaction = {
         description: '',
-        value: 0,
+        value: "",
         type: null
     }
 
-    const [transaction, setTransaction] =useState(defaultTransaction)
+    const [transaction, setTransaction] = useState(defaultTransaction)
+    const [selectedType, setSelectedType] = useState(null)
     const desc = useRef(null)
     const formRef = useRef(null);
-    const {addTransaction} = useContext(ValueContext)
+    const { addTransaction } = useContext(ValueContext)
 
     function handleSubmit(ev) {
         ev.preventDefault()
 
-        if (transaction.type === null) {
+        if (!selectedType) {
             alert('Por favor, selecione o tipo de transação (entrada ou saída).');
             return
         }
@@ -33,23 +35,29 @@ export default function AddTransaction() {
             setTransaction(defaultTransaction)
             formRef.current.reset()
             desc.current.focus()
+            setSelectedType(null)
         }
 
     }
 
     const handleChange = (ev) => {
-        setTransaction((current) => ({...current, [ev.target.name]: ev.target.value}))
+        setTransaction((current) => ({ ...current, [ev.target.name]: ev.target.value }))
     }
 
-    const handleRadioChange = (ev) => {
+    const handleSelectChange = (ev) => {
         const selectedType = ev.target.value;
         const typeValue = selectedType === 'entrada' ? true : false;
-        setTransaction((current) => ({...current, type: typeValue}));
+        setTransaction((current) => ({ ...current, type: typeValue }));
+        setSelectedType(selectedType)
     }
 
     return (
         <>
-            <form ref={formRef} onSubmit={handleSubmit} className={styles.addTransactionAria}>
+            <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className={styles.addTransactionAria}
+            >
                 <div className={styles.inputContent}>
                     <label htmlFor="description">Descrição</label>
                     <input
@@ -74,28 +82,21 @@ export default function AddTransaction() {
                         onChange={handleChange}
                     />
                 </div>
-                <div className={styles.inputRadioContent}>
-                    <div>
-                        <input
-                            type="radio"
-                            name="type"
-                            id="input"
-                            value='entrada'
-                            onChange={handleRadioChange}
-                        />
-                        <label htmlFor="input">Entrada</label>
-                    </div>
-                    <div>
-                        <input
-                            type="radio"
-                            name="type"
-                            id="output"
-                            value='saida'
-                            onChange={handleRadioChange}
-                        />
-                        <label htmlFor="output">Saída</label>
-                    </div>
-                </div>
+                <Form.Select
+                    className={styles.select}
+                    aria-label="Default select example"
+                    onChange={handleSelectChange}
+                >
+                    <option>
+                        Tipo de Transação
+                    </option>
+                    <option value="entrada">
+                        Entrada
+                    </option>
+                    <option value="saida">
+                        Saída
+                    </option>
+                </Form.Select>
                 <button className={styles.addButton}>Adicionar</button>
             </form>
         </>

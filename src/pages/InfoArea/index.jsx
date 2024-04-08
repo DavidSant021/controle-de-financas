@@ -31,7 +31,7 @@ export default function InfoArea() {
                                 <td className={styles.td} >{t.description}</td>
                                 <td className={styles.td} >{formattedValue(+t.value)}</td>
                                 <td className={`${styles.td} ${styles.tdTrash}`} >{
-                                    t.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDonw} />
+                                    t.type ? <FaRegArrowAltCircleUp className={styles.arrowUp} /> : <FaRegArrowAltCircleDown className={styles.arrowDown} />
                                 }
                                     <ButtonDelete
                                         className={styles.trash}

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 40px;
     background-color: white;
     height: auto;
     width: 100%;
@@ -10,7 +11,7 @@
     box-shadow: 2px 2px 5px black;
 
     label {
-        font-weight: 400;
+        font-weight: bold;
     }
 }
 
@@ -30,13 +31,8 @@
     }
 }
 
-.inputRadioContent {
-    display: flex;
-    column-gap: 20px;
-
-    input {
-        margin-right: 5px;
-    }
+.select {
+    border: 1px solid black !important;
 }
 
 .addButton {
@@ -67,10 +63,4 @@
             height: 40px;
         }
     }
-    
-    .inputRadioContent {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }  
 }
