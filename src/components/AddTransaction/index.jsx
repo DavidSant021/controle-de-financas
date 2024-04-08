@@ -3,6 +3,7 @@ import Transaction from "../../entities/Transaction"
 import { ValueContext } from "../../context/ValueContext"
 import styles from './style.module.css'
 import Form from 'react-bootstrap/Form';
+import Modal from "../Modal";
 
 export default function AddTransaction() {
     const defaultTransaction = {
@@ -13,15 +14,20 @@ export default function AddTransaction() {
 
     const [transaction, setTransaction] = useState(defaultTransaction)
     const [selectedType, setSelectedType] = useState(null)
+    const [open, setOpen] = useState(false)
+    const [modalType, setModalType] = useState(false)
+
     const desc = useRef(null)
     const formRef = useRef(null);
+
     const { addTransaction } = useContext(ValueContext)
 
     function handleSubmit(ev) {
         ev.preventDefault()
 
         if (!selectedType) {
-            alert('Por favor, selecione o tipo de transação (entrada ou saída).');
+            setModalType(false)
+            setOpen(true)
             return
         }
 
@@ -29,6 +35,8 @@ export default function AddTransaction() {
             const validTransaction = new Transaction(transaction)
             setTransaction(validTransaction)
             addTransaction(validTransaction)
+            setModalType(true)
+            setOpen(true)
         } catch (error) {
             console.log(error)
         } finally {
@@ -99,6 +107,11 @@ export default function AddTransaction() {
                 </Form.Select>
                 <button className={styles.addButton}>Adicionar</button>
             </form>
+            <Modal
+                isOpen={open}
+                setOpen={setOpen}
+                modalType={modalType}
+            />
         </>
     )
 }

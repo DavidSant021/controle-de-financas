@@ -1,0 +1,109 @@
+.background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: teal;
+    border-radius: 10px 10px 0 0 ;
+
+    span {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.modalHeaderError {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(214, 19, 19);
+    border-radius: 10px 10px 0 0 ;
+
+    span {
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.icon {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+
+    span {
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: teal;
+    }
+}
+
+.modalBodyError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+
+    span {
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(214, 19, 19);
+    }
+}
+
+.contentCheck {
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid teal;
+}
+
+.contentErrorIcon {
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid rgb(214, 19, 19);
+}
+
+.check {
+    color: teal;
+    font-size: 5rem;
+}
+
+.errorIcon {
+    color: rgb(214, 19, 19);
+    font-size: 5rem;
+}
