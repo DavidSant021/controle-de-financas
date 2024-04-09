@@ -1,0 +1,15 @@
+.main {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    position: relative;
+    top: 130px;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        width: 100vw;
+    }
+}

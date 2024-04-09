@@ -1,0 +1,16 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    background-color: rgba(0, 0, 0, 0.633);
+    color: white;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: -70px;
+
+    p {
+        margin: 0;
+    }
+}
