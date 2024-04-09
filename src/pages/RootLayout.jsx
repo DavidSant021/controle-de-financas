@@ -6,7 +6,7 @@ export default function RootLayout() {
     return (
         <>
           <header className="header">
-            <h1>Controle de Finanças</h1>
+            <h1>My Finances</h1>
           </header>
           <main className="main">
             <ContentCards />

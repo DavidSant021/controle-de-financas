@@ -18,13 +18,13 @@ export default function ContentCards() {
 
     return (
         <div className={styles.container}>
-            <InfoCard  infoText="Entradas" quantity={totalEntrys} >
-                <FaRegArrowAltCircleUp className={styles.icon} />
+            <InfoCard isGreen={false}  infoText="Entradas" quantity={totalEntrys} >
+                <FaRegArrowAltCircleUp className={styles.iconEntry} />
             </InfoCard>
-            <InfoCard  infoText="Saídas" quantity={totalExits} >
-                <FaRegArrowAltCircleDown className={styles.icon} />
+            <InfoCard isGreen={false}  infoText="Saídas" quantity={totalExits} >
+                <FaRegArrowAltCircleDown className={styles.iconExit} />
             </InfoCard>
-            <InfoCard  infoText="Total" quantity={totalValue} >
+            <InfoCard isGreen={true} infoText="Total" quantity={totalValue} >
                 <FaDollarSign className={styles.icon} />
             </InfoCard>
         </div>

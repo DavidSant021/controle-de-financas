@@ -19,13 +19,13 @@
 .viewButton {
     text-decoration: none;
     color: white;
-    background-color: teal;
+    background-color: #49AA26;
     border-radius: 5px;
     padding: 3px 8px;
 }
 
 .viewButton:hover {
-    background-color: #06aea8;
+    background-color: #429723;
 }
 
 .arrowUp {

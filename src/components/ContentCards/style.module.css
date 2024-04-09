@@ -7,8 +7,13 @@
     width: 100%;
 }
 
-.icon {
-    color: black;
+.iconEntry {
+    color: rgb(2, 161, 2);
+    font-size: 1.3rem;
+}
+
+.iconExit {
+    color: rgb(219, 8, 8);
     font-size: 1.3rem;
 }
 

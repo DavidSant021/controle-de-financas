@@ -7,7 +7,7 @@
     background-color: white;
     height: auto;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: 2px 2px 5px black;
 }
 
@@ -47,14 +47,14 @@
     border-radius: 5px;
     border: none;
     text-transform: uppercase;
-    background-color: teal;
+    background-color: #49AA26;
     color: white;
     cursor: pointer;
     transition: .5s;
 }
 
 .addButton:hover {
-    background-color: #06aea8;
+    background-color: #429723;
 }
 
 @media (max-width: 1000px) {

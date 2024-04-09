@@ -20,7 +20,7 @@
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    background-color: teal;
+    background-color: #49AA26;
     border-radius: 5px;
     padding: 15px 30px;
     cursor: pointer;
@@ -28,5 +28,5 @@
 }
 
 .returnButton:hover {
-    background-color: #06aea8;
+    background-color: #429723;
 }
