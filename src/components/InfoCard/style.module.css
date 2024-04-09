@@ -48,6 +48,10 @@
     .infoContent {
         width: 70%;
     }
+
+    .infoContentGreen {
+        width: 70%;
+    }
 }
 
 @media (max-width: 350px) {
