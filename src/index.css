@@ -54,6 +54,23 @@ body {
     box-shadow: 2px 2px 5px black;
 }
 
+.footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    background-color: rgba(0, 0, 0, 0.633);
+    color: white;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 0px;
+
+    p {
+        margin: 0;
+    }
+}
+
 @media (max-width: 1000px) {
     .main {
         width: 100vw;
